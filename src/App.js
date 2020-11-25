@@ -3,7 +3,7 @@ import Titulo from "./components/Titulo";
 import TotalCaracteres from "./components/TotalCaracteres";
 import "./styles.css";
 
-function App() {
+const App = () => {
   return (
     <div>
       <center>

@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "../styles.css";
 
-class Titulo extends Component {
-  render() {
-    return (
-      <header id="titulo">React - Contador de Caracteres</header>
-    );
-  }
+const Titulo = () => {
+  return(
+    <header id="titulo">React - Contador de Caracteres</header>
+  );
 }
 
 export default Titulo;

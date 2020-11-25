@@ -1,27 +1,19 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../styles.css";
 
-class TotalCaracteres extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { numeroDeCaracteres: 0 };
-  }
+const TotalCaracteres = () => {
 
-  onChangeNumeroDeCaracteres = (frase) => {
-    this.setState({
-      numeroDeCaracteres: frase.length,
-    });
-  }
+  const [contator, setContador] = useState(0);
 
-  render() {
-    return (
-      <div>
-        <input id="input-frase" onChange = { (e) => this.onChangeNumeroDeCaracteres(e.target.value) } 
-        type="text"></input>      
-        <p id="p-frase">{`Esse texto contém ${this.state.numeroDeCaracteres} caracteres.`}</p>
-      </div>
-    );
-  }
+  const onChangeNumeroDeCaracteres = (frase) => { setContador(frase.length); }  
+
+  return (
+    <div>
+      <input id="input-frase" onChange = { (e) => onChangeNumeroDeCaracteres(e.target.value) } 
+      type="text"></input>      
+      <p id="p-frase">{`Esse texto contém ${contator} caracteres.`}</p>
+    </div>
+  );
 }
 
 export default TotalCaracteres;
